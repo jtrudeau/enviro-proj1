@@ -1,2 +1,5 @@
 # enviro-proj1
-Code base for environmental monitoring prototyping project. Independent study project
+
+Repository for the environmental monitoring prototyping project.
+
+Get started with **Lesson 4 Temperature and Humidity Module** [here](https://drive.google.com/file/d/1GlVXnQ0QrKdMmrbBdFC4LuN1xdZ-o-Ja/view?usp=sharing)
