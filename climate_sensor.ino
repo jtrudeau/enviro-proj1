@@ -6,6 +6,15 @@
 #define DHTTYPE DHT11 // specify DHT sensor type
 #define SD_CS 7 // chip select pin for SD card module
 
+// Circuit setup : 
+//    microSD card adapter
+//        Serial Clock in digital pin 13
+//        MISO in digital pin 12
+//        MOSI in digital pin 11 
+//    I2C module
+//        SCL (Clock Line) in analog pin A5
+//        SDA (Serial Data) in analog pin A4
+
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
