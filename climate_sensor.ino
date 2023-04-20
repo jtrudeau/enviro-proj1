@@ -1,10 +1,11 @@
 #include <SD.h> // SD library for file reading and modifications 
 #include <DHT.h> // DHT library for climate sensor
-#include <Wire.h> // Wire Library for I2C module configuration
 
-#define DHTPIN 4 // connect DHT11 sensor to I/O pin 4 on I2C module
+#define DHTPIN 4 // connect DHT11 sensor to I/O pin 4
 #define DHTTYPE DHT11 // specify DHT sensor type
 #define SD_CS 7 // chip select pin for SD card module
+
+DHT dht(DHTPIN, DHTTYPE);
 
 // Circuit setup : 
 //    microSD card adapter
@@ -15,11 +16,9 @@
 //        SCL (Clock Line) in analog pin A5
 //        SDA (Serial Data) in analog pin A4
 
-DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   Serial.begin(9600);
-  Wire.begin();
   if (!SD.begin(SD_CS)) {
     Serial.println("Error initializing SD card.");
     return;
@@ -53,4 +52,3 @@ void loop() {
 
   delay(10000); // take readings every 10 seconds
 }
-
